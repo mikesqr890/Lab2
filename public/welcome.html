@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida - Calculadora de Cuota Mensual</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: darkgreen;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .descripcion {
+            font-size: 18px;
+            color: #333;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .botones {
+            margin: 30px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: darkgreen;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #2d7a4d;
+            transform: scale(1.05);
+        }
+
+        .caracteristicas {
+            text-align: left;
+            margin: 30px auto;
+            max-width: 600px;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid darkgreen;
+        }
+
+        .caracteristicas h3 {
+            color: darkgreen;
+            margin-bottom: 15px;
+        }
+
+        .caracteristicas ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .caracteristicas li {
+            padding: 8px 0;
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        .caracteristicas li:before {
+            content: "✓ ";
+            color: darkgreen;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #6ee290;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>🧮 Calculadora de Cuota Mensual</h1>
+        
+        <div class="descripcion">
+            <p>Bienvenido al sistema de cálculo de cuotas mensuales para préstamos.</p>
+            <p>Esta aplicación te permite calcular de forma precisa la cuota mensual que deberás pagar por un préstamo, considerando el monto solicitado, el plazo en meses y la tasa de interés.</p>
+        </div>
+
+        <div class="caracteristicas">
+            <h3>📋 Características:</h3>
+            <ul>
+                <li>Cálculo preciso usando fórmula financiera estándar</li>
+                <li>Interfaz simple e intuitiva</li>
+                <li>Resultados inmediatos</li>
+                <li>Basado en Node.js + Express</li>
+            </ul>
+        </div>
+
+        <div class="botones">
+            <a href="/calcular" class="boton">🚀 Ir a la Calculadora</a>
+            <a href="/about" class="boton">ℹ️ Acerca de</a>
+        </div>
+    </div>
+
+    <footer>
+        <strong>Universidad Autónoma de Occidente</strong><br>
+        Estructuras de Datos y Algoritmos 1<br>
+        Proyecto: Desarrollo FrontEnd Dinámico con Backend
+    </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculadora de Cuota Mensual</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .elEstilo {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        h1 {
+            color: darkgreen;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 500px;
+            margin: 20px auto;
+            padding: 5px;
+            border: 2px solid darkgreen;
+            border-collapse: collapse;
+            background-color: #6ee290;
+        }
+
+        table caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: darkgreen;
+            font-size: 20px;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #2d7a4d;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: 2px solid darkgreen;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            height: 45px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2d7a4d;
+            transform: scale(1.02);
+        }
+
+        input[type="submit"]:active {
+            transform: scale(0.98);
+        }
+
+        .coloreado {
+            background-color: #6ee290;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .info {
+            margin: 20px auto;
+            padding: 15px;
+            width: 500px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            border: 1px solid darkgreen;
+            font-size: 14px;
+            color: #2d7a4d;
+        }
+    </style>    
+</head>
+<body>
+    <main> 
+        <div class="elEstilo">
+            <h1>Calculadora de Cuota Mensual</h1>
+            
+            <!-- Formulario que envía datos al backend -->
+            <form action="/calcular" enctype="application/x-www-form-urlencoded" method="post">
+                <table>
+                    <caption>Ingrese los siguientes datos</caption>
+                    <tbody>
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" value="" name="nombre" placeholder="Ingresa el nombre" required></td>
+                        </tr>
+                        <tr>
+                            <td>Préstamo</td>
+                            <td><input type="number" value="" name="prestamo" placeholder="Ingrese la Cantidad" required></td>
+                        </tr>
+                        <tr>
+                            <td>Meses</td>
+                            <td><input type="number" value="" name="meses" placeholder="Seleccione la Cantidad" required></td>
+                        </tr>
+                        <tr>
+                            <td>Interés</td>
+                            <td><input type="number" value="" step="0.01" name="interes" placeholder="Ej: 0.15 para 15%" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Calcular Cuota"></td>              
+                        </tr>                                 
+                    </tbody>
+                </table>                          
+            </form>
+
+            <div class="info">
+                <strong>ℹ️ Instrucciones:</strong><br>
+                • Ingrese el nombre de la persona<br>
+                • Indique el monto del préstamo<br>
+                • Establezca el plazo en meses<br>
+                • El interés debe ser decimal (0.15 = 15%)<br>
+                • Presione "Calcular Cuota" para ver el resultado
+            </div>
+        </div>
+    </main>
+    <footer> 
+        <hr>
+        <div class="coloreado">
+            Creado por los estudiantes para el curso de EDyA1 en la Universidad Autónoma de Occidente
+        </div>
+    </footer>
+</body>
+</html>
