@@ -1,13 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About UAO</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Acerca de - Calculadora de Cuota Mensual</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: darkgreen;
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: darkgreen;
+            font-size: 24px;
+            margin-top: 30px;
+            border-bottom: 3px solid #6ee290;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2d7a4d;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .seccion {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .info-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid darkgreen;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .comando {
+            background-color: #2d2d2d;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .paso {
+            background-color: #6ee290;
+            color: #1a5c37;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .paso-numero {
+            background-color: darkgreen;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .lista-caracteristicas {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista-caracteristicas li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f5f5f5;
+            border-left: 3px solid #6ee290;
+            border-radius: 3px;
+        }
+
+        .lista-caracteristicas li:before {
+            content: "✓ ";
+            color: darkgreen;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .tecnologias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background-color: darkgreen;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .boton-volver {
+            display: inline-block;
+            background-color: darkgreen;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+
+        .boton-volver:hover {
+            background-color: #2d7a4d;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #6ee290;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .formula {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 15px 0;
+            font-size: 18px;
+            border: 2px dashed darkgreen;
+        }
+
+        .tabla-rutas {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .tabla-rutas th, .tabla-rutas td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #6ee290;
+        }
+
+        .tabla-rutas th {
+            background-color: darkgreen;
+            color: white;
+            font-weight: bold;
+        }
+
+        .tabla-rutas tr:nth-child(even) {
+            background-color: #e8f5e9;
+        }
+
+        .metodo {
+            background-color: #2d7a4d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Esta es la pagina para indicar el ACERCA DE .....</h1>
+    <div class="container">
+        <h1>ℹ️ Acerca de este Proyecto</h1>
+
+        <!-- Sección: Descripción -->
+        <div class="seccion">
+            <h2>📋 Descripción del Proyecto</h2>
+            <p>
+                <strong>Calculadora de Cuota Mensual</strong> es una aplicación web desarrollada con Node.js y Express 
+                que permite calcular la cuota mensual que una persona debe pagar por un préstamo, considerando 
+                el monto solicitado, el plazo en meses y la tasa de interés aplicada.
+            </p>
+            <p>
+                Este proyecto combina un <strong>backend dinámico</strong> con Node.js que procesa los datos y 
+                realiza los cálculos, y un <strong>frontend estático</strong> basado en HTML/CSS que presenta 
+                la información de forma clara y amigable.
+            </p>
+        </div>
+
+        <!-- Sección: Fórmula -->
+        <div class="seccion">
+            <h2>🔢 Fórmula Matemática</h2>
+            <p>El cálculo de la cuota mensual se realiza utilizando la fórmula financiera estándar:</p>
+            <div class="formula">
+                cuota = préstamo × [ (1+i)<sup>n</sup> × i ] / [ (1+i)<sup>n</sup> - 1 ]
+            </div>
+            <div class="info-box">
+                <strong>Donde:</strong><br>
+                • <strong>i</strong> = Tasa de interés en formato decimal (0.15 para 15%)<br>
+                • <strong>n</strong> = Número de meses del préstamo<br>
+                • <strong>préstamo</strong> = Monto solicitado
+            </div>
+        </div>
+
+        <!-- Sección: Instrucciones -->
+        <div class="seccion">
+            <h2>🚀 Cómo Activar el Servidor</h2>
+            
+            <div class="paso">
+                <span class="paso-numero">1</span>
+                Abre una terminal o símbolo del sistema
+            </div>
+            <p>En Windows: <code>cmd</code> o <code>PowerShell</code><br>
+               En Mac/Linux: <code>Terminal</code></p>
+
+            <div class="paso">
+                <span class="paso-numero">2</span>
+                Navega a la carpeta del proyecto
+            </div>
+            <div class="comando">$ cd ruta/a/tu/proyecto/Lab2</div>
+            <p><em>Ejemplo: cd Desktop/Lab2</em></p>
+
+            <div class="paso">
+                <span class="paso-numero">3</span>
+                (Opcional) Verifica que las dependencias estén instaladas
+            </div>
+            <div class="comando">$ npm install</div>
+            <p><em>Este comando instala Express y otras dependencias necesarias</em></p>
+
+            <div class="paso">
+                <span class="paso-numero">4</span>
+                Inicia el servidor con Node.js
+            </div>
+            <div class="comando">$ node index.js</div>
+
+            <div class="paso">
+                <span class="paso-numero">5</span>
+                Verás este mensaje en la terminal
+            </div>
+            <div class="comando">==================================================
+🚀 Servidor de Calculadora de Cuota Mensual
+==================================================
+📍 Ejecutándose en: http://localhost:3000
+📊 Calculadora: http://localhost:3000/calcular
+ℹ️  Acerca de: http://localhost:3000/about
+==================================================</div>
+
+            <div class="paso">
+                <span class="paso-numero">6</span>
+                Abre tu navegador y visita
+            </div>
+            <div class="info-box">
+                • <strong>Página principal:</strong> <a href="http://localhost:3000" target="_blank">http://localhost:3000</a><br>
+                • <strong>Calculadora:</strong> <a href="http://localhost:3000/calcular" target="_blank">http://localhost:3000/calcular</a><br>
+                • <strong>Acerca de:</strong> <a href="http://localhost:3000/about" target="_blank">http://localhost:3000/about</a>
+            </div>
+
+            <div class="info-box" style="background-color: #fff3cd; border-left-color: #ff9800;">
+                <strong>⚠️ Para detener el servidor:</strong><br>
+                Presiona <kbd style="background-color: #333; color: white; padding: 3px 8px; border-radius: 3px;">Ctrl + C</kbd> en la terminal
+            </div>
+        </div>
+
+        <!-- Sección: Rutas -->
+        <div class="seccion">
+            <h2>🛣️ Rutas del Servidor</h2>
+            <table class="tabla-rutas">
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Ruta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="metodo">GET</span></td>
+                        <td>/</td>
+                        <td>Página de bienvenida principal</td>
+                    </tr>
+                    <tr>
+                        <td><span class="metodo">GET</span></td>
+                        <td>/calcular</td>
+                        <td>Muestra el formulario de la calculadora</td>
+                    </tr>
+                    <tr>
+                        <td><span class="metodo" style="background-color: #ff6b6b;">POST</span></td>
+                        <td>/calcular</td>
+                        <td>Procesa el cálculo y retorna el resultado</td>
+                    </tr>
+                    <tr>
+                        <td><span class="metodo">GET</span></td>
+                        <td>/about</td>
+                        <td>Información del proyecto (esta página)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección: Tecnologías -->
+        <div class="seccion">
+            <h2>🛠️ Tecnologías Utilizadas</h2>
+            <div class="tecnologias">
+                <div class="tech-badge">Node.js</div>
+                <div class="tech-badge">Express 4.18.2</div>
+                <div class="tech-badge">HTML5</div>
+                <div class="tech-badge">CSS3</div>
+                <div class="tech-badge">JavaScript</div>
+            </div>
+        </div>
+
+        <!-- Sección: Características -->
+        <div class="seccion">
+            <h2>✨ Características del Sistema</h2>
+            <ul class="lista-caracteristicas">
+                <li>Cálculo preciso usando fórmula financiera estándar</li>
+                <li>Validación de datos en el backend</li>
+                <li>Interfaz limpia e intuitiva</li>
+                <li>Mensajes de error claros</li>
+                <li>Resultados formateados profesionalmente</li>
+                <li>Servidor Express robusto y eficiente</li>
+                <li>Diseño responsive adaptable</li>
+            </ul>
+        </div>
+
+        <!-- Sección: Estructura -->
+        <div class="seccion">
+            <h2>📁 Estructura del Proyecto</h2>
+            <div class="comando" style="color: #00d4ff;">Lab2/
+├── node_modules/       # Dependencias de npm
+├── public/            # Archivos estáticos públicos
+│   ├── SIGED.pdf
+│   └── welcome.html
+├── scripts/           # Lógica del backend
+│   └── utils.js      # Función de cálculo
+├── static/            # Páginas HTML estáticas
+│   ├── about.html    # Esta página
+│   └── calculadora.html
+├── index.js           # Servidor Express principal
+├── package.json       # Configuración del proyecto
+└── package-lock.json  # Lockfile de dependencias</div>
+        </div>
+
+        <!-- Sección: Información Académica -->
+        <div class="seccion">
+            <h2>🎓 Información Académica</h2>
+            <div class="info-box">
+                <strong>Universidad:</strong> Universidad Autónoma de Occidente<br>
+                <strong>Facultad:</strong> Ingeniería<br>
+                <strong>Núcleo:</strong> MIDIA<br>
+                <strong>Curso:</strong> Estructuras de Datos y Algoritmos 1<br>
+                <strong>Proyecto:</strong> Desarrollo FrontEnd Dinámico con Backend<br>
+                <strong>Tecnología:</strong> Node.js + Express<br>
+                <strong>Año:</strong> 2024-2025
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="/" class="boton-volver">🏠 Inicio</a>
+            <a href="/calcular" class="boton-volver">🧮 Ir a la Calculadora</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Creado por los estudiantes para el curso de EDyA1<br>
+            Universidad Autónoma de Occidente © 2024-2025
+        </div>
+    </div>
 </body>
 </html>
