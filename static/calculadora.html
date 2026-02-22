@@ -99,6 +99,30 @@
             font-size: 14px;
             color: #2d7a4d;
         }
+
+        .btnVolver {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: darkgreen;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btnVolver:hover {
+            background-color: #2d7a4d;
+            transform: scale(1.05);
+        }
+
+        .btnVolver:active {
+            transform: scale(0.98);
+        }
     </style>    
 </head>
 <body>
@@ -142,6 +166,8 @@
                 • El interés debe ser decimal (0.15 = 15%)<br>
                 • Presione "Calcular Cuota" para ver el resultado
             </div>
+
+            <a href="/" class="btnVolver">Inicio</a>
         </div>
     </main>
     <footer> 
