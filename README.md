@@ -1,4 +1,4 @@
-Hecho por Michael Steven Quimbayo Rodriguez, Carlos Eduardo Duarte Camaron
+Hecho por Michael Steven Quimbayo Rodriguez, Carlos Eduardo Duarte Camaron y Francisco Javier Quintero Lara
 
 Cómo ejecutar el programa
 
